@@ -3,11 +3,11 @@
 
 #include<string.h>
 
-int binary_search(int arr[] , int x ,int sz){
+int binary_search(int arr[] , int x){
 	int i = 0;
+	int sz = sizeof(arr) / sizeof(0);
 	int left = 0;
 	int right = sz - 1;
-	
 	int Mid = 0;
 	while (right >= left) {
 		Mid = (left + right) / 2;
@@ -27,9 +27,9 @@ int binary_search(int arr[] , int x ,int sz){
 int main() {
 	int arr1[] = { 1,2,3,4,5,6,7,8,9,10 };
 	int k = 5;
-	int sz = sizeof(arr1) / sizeof(arr1[0]);
+
 	int ret = 0;
-	ret = binary_search(arr1, k,sz);
+	ret = binary_search(arr1, k);
 	if (ret == -1) {
 		printf("找不到这个数");
 	}
