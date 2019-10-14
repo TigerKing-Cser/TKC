@@ -7,5 +7,4 @@
 #define ROWS 3
 #define COLS 3
 
-#define serial 3  /*表示3子连续胜利*/
 void game();
