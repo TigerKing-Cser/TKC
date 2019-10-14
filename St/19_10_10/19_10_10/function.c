@@ -123,11 +123,7 @@ void game(){
 			break;
 		}
 		if (is_full == 9) {
-<<<<<<< HEAD
 			printf("平局\n");
-=======
-			printf("平局");
->>>>>>> 84cf19da3fc80e1e561b08d8ad0a416d3a9451db
 			break;
 		}
 	}
