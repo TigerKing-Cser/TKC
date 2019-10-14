@@ -1,5 +1,7 @@
 ﻿  function.c
 C:\TKC\St\19_10_10\19_10_10\function.c(18,40): warning C4474: printf: 格式字符串中传递的参数太多
+  test_19_10_10.c
+  正在生成代码...
 C:\TKC\St\19_10_10\19_10_10\function.c(18,40): message : 占位符和其参数预计 1 可变参数，但提供的却是 3 参数
-C:\TKC\St\19_10_10\19_10_10\function.c(104): warning C4715: “IsWin”: 不是所有的控件路径都返回值
+C:\TKC\St\19_10_10\19_10_10\function.c(101): warning C4715: “IsWin”: 不是所有的控件路径都返回值
   19_10_10.vcxproj -> C:\TKC\St\19_10_10\Debug\19_10_10.exe

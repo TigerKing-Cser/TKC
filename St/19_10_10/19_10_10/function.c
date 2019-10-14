@@ -1,5 +1,5 @@
 #include "game.h"
-
+int is_full = 0;
 void InitBoard(char ch[ROWS][COLS], int row, int col) {
 	int i = 0;
 	int j = 0;
@@ -50,6 +50,7 @@ void player(char ch[ROWS][COLS], int row, int col) {
 			printf("输入的坐标超界");
 		}
 	}
+	is_full++;
 }
 void computer(char ch[ROWS][COLS], int row, int col) {
 	int x = 0;
@@ -65,42 +66,38 @@ void computer(char ch[ROWS][COLS], int row, int col) {
 			}
 		}
 	}
+	is_full++;
 }
 char IsWin(char ch[ROWS][COLS], int row, int col) {				//获胜条件  ch[x][1]=ch[x][2]=ch[x][3]
 	int i = 0;													//			ch[1][x]=ch[2][x]=ch[3][x]
 	int j = 0;													//			ch[1][1]=ch[2][2]=ch[3][3] ch[1][3]=ch[2][2]=ch[3][1]
 	int ret = 0;
 	for (i = 0; i < row; i++) {
-		int flag = 0;
-		for (j = 0; j < col - 1; j++) {
+		ret = 0;
+		for (j = 0; j < col-1; j++) {
 			if (ch[i][j] == ch[i][j + 1] && ch[i][j] != ' ') {
-				flag++;
+				ret++;
 			}
-			if (flag == 2) {
+			if (ret == 2) {
 				return ch[i][j];
 			}
 		}
 	}
-	for (i = 0; i < row; i++) {
-		int flag = 0;
-		for (j = 0; j < col - 1; j++) {
-			if (ch[i][j] == ch[i + 1][j] && ch[i][j] != ' ') {
-				flag++;
+	for (i = 0; i < col; i++) {
+		ret = 0;
+		for (j = 0; j < row - 1; j++) {
+			if (ch[j][i] == ch[j + 1][i] && ch[j][i] != ' ') {
+				ret++;
 			}
-			if (flag == 2) {
-				return ch[i][j];
+			if (ret == 2) {
+				return ch[j][i];
 			}
 		}
 	}
-	for (i = 0; i < row; i++) {
-		if (ch[i][1] == ch[i + 1][2] && ch[i + 2][3] == ch[i][1] && ch[i][1] == ' ') {
-			return ch[i][1];
-		}
-		if (ch[i][3] == ch[i + 1][2] && ch[i + 2][1] == ch[i][3] && ch[i][3] == ' ') {
-			return ch[i][3];
-		}
+	if ((ch[0][2] == ch[1][1] == ch[2][0] || ch[0][0] == ch[1][1] == ch[2][2])&&ch[1][1] == ' ') {
+		return ch[1][1];
 	}
-	/*ret = IsFull(ch, ROWS, COLS);*/
+	
 }
 void game(){
 	int ret = 0;
@@ -108,16 +105,25 @@ void game(){
 	InitBoard(ch, ROWS, COLS);
 	DisplayBoard(ch, ROWS, COLS);
 	while (1) {
+		is_full = 0;
 		player(ch, ROWS, COLS);
 		DisplayBoard(ch, ROWS, COLS);
 		if (IsWin(ch, ROWS, COLS) == '*') {
 			printf("恭喜玩家获胜\n");
 			break;
 		}
+		if (is_full == 9) {
+			printf("平局");
+			break;
+		}
 		computer(ch, ROWS, COLS);
 		DisplayBoard(ch, ROWS, COLS);
 		if (IsWin(ch, ROWS, COLS) == '#') {
 			printf("电脑获胜\n");
+			break;
+		}
+		if (is_full == 9) {
+			printf("平局");
 			break;
 		}
 	}
