@@ -54,8 +54,8 @@ typedef struct {
 	int y;
 }location;
 location find_arr(int** arr, int row, int col, int key,location lo) {
-	int startx = 0;
-	int starty = col - 1;
+	int startx = row - 1;
+	int starty = 0;
 	while (startx >= 0 && starty < col) {
 		if (arr[startx][starty] == key) {
 			lo.x = startx;
