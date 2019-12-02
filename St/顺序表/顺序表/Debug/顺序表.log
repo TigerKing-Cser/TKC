@@ -1,0 +1,5 @@
+﻿  SeqList.c
+  test.c
+  正在生成代码...
+C:\TKC\St\顺序表\顺序表\SeqList.c(78,23): warning C4018: “>”: 有符号/无符号不匹配
+  顺序表.vcxproj -> C:\TKC\St\顺序表\Debug\顺序表.exe
