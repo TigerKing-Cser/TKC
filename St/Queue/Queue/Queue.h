@@ -3,7 +3,7 @@
 #include<malloc.h>
 #include<assert.h>
 
-typedef BTNode* QDataType;
+typedef int QDataType;
 
 typedef struct QListNode
 {
