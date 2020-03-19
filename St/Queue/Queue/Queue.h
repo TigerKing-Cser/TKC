@@ -1,8 +1,9 @@
+#pragma once
 #include<stdio.h>
 #include<malloc.h>
 #include<assert.h>
 
-typedef int QDataType;
+typedef BTNode* QDataType;
 
 typedef struct QListNode
 {
