@@ -1,0 +1,7 @@
+﻿BinaryTree.obj : error LNK2019: 无法解析的外部符号 _QueueInit，该符号在函数 _BinaryTreeLevelOrder 中被引用
+BinaryTree.obj : error LNK2019: 无法解析的外部符号 _QueuePush，该符号在函数 _BinaryTreeLevelOrder 中被引用
+BinaryTree.obj : error LNK2019: 无法解析的外部符号 _QueuePop，该符号在函数 _BinaryTreeLevelOrder 中被引用
+BinaryTree.obj : error LNK2019: 无法解析的外部符号 _QueueFront，该符号在函数 _BinaryTreeLevelOrder 中被引用
+BinaryTree.obj : error LNK2019: 无法解析的外部符号 _QueueEmpty，该符号在函数 _BinaryTreeLevelOrder 中被引用
+BinaryTree.obj : error LNK2019: 无法解析的外部符号 _QueueDestroy，该符号在函数 _BinaryTreeLevelOrder 中被引用
+C:\TKC\St\BinaryTree\Debug\BinaryTree.exe : fatal error LNK1120: 6 个无法解析的外部命令

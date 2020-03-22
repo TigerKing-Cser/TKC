@@ -1,0 +1,6 @@
+﻿  LinkList.c
+C:\TKC\St\LinkList(带头+双向+循环)\LinkList(带头+双向+循环)\LinkList.c(5,36): warning C4013: “malloc”未定义；假设外部返回 int
+  test.c
+  正在生成代码...
+C:\TKC\St\LinkList(带头+双向+循环)\LinkList(带头+双向+循环)\LinkList.c(16,7): warning C4013: “free”未定义；假设外部返回 int
+  LinkList(带头+双向+循环).vcxproj -> C:\TKC\St\LinkList(带头+双向+循环)\Debug\LinkList(带头+双向+循环).exe

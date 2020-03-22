@@ -1,0 +1,4 @@
+﻿  test.cpp
+C:\TKC\St\string\string\string.h(254,13): warning C4018: “<”: 有符号/无符号不匹配
+C:\TKC\St\string\string\string.h(265,17): warning C4018: “<=”: 有符号/无符号不匹配
+  string.vcxproj -> C:\TKC\St\string\Debug\string.exe

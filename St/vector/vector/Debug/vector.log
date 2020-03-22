@@ -1,0 +1,4 @@
+﻿  test.cpp
+C:\TKC\St\vector\vector\test.cpp(21,20): warning C4018: “<”: 有符号/无符号不匹配
+C:\TKC\St\vector\vector\test.cpp(60,11): warning C4018: “<”: 有符号/无符号不匹配
+  vector.vcxproj -> C:\TKC\St\vector\Debug\vector.exe

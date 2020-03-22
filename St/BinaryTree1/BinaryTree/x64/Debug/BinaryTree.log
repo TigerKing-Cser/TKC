@@ -1,0 +1,12 @@
+﻿  BinaryTree.c
+  test.c
+  正在生成代码...
+C:\TKC\St\BinaryTree\BinaryTree\BinaryTree.c(20,14): warning C4098: “BinaryTreeDestory”:“void”函数返回值
+C:\TKC\St\BinaryTree\BinaryTree\BinaryTree.c(67): warning C4715: “BinaryTreeFind”: 不是所有的控件路径都返回值
+BinaryTree.obj : error LNK2019: 无法解析的外部符号 QueueInit，该符号在函数 BinaryTreeLevelOrder 中被引用
+BinaryTree.obj : error LNK2019: 无法解析的外部符号 QueuePush，该符号在函数 BinaryTreeLevelOrder 中被引用
+BinaryTree.obj : error LNK2019: 无法解析的外部符号 QueuePop，该符号在函数 BinaryTreeLevelOrder 中被引用
+BinaryTree.obj : error LNK2019: 无法解析的外部符号 QueueFront，该符号在函数 BinaryTreeLevelOrder 中被引用
+BinaryTree.obj : error LNK2019: 无法解析的外部符号 QueueEmpty，该符号在函数 BinaryTreeLevelOrder 中被引用
+BinaryTree.obj : error LNK2019: 无法解析的外部符号 QueueDestroy，该符号在函数 BinaryTreeLevelOrder 中被引用
+C:\TKC\St\BinaryTree\x64\Debug\BinaryTree.exe : fatal error LNK1120: 6 个无法解析的外部命令
