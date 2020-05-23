@@ -1,6 +1,8 @@
 #include<iostream>
 #include<vector>
 #include<algorithm>
+#include<cassert>
+#include"vector.h"
 
 using namespace std;
 /*遍历数据  三种方式
@@ -50,21 +52,35 @@ void test1() {
 		cout << a << ' ';
 	}
 	cout << endl;
+
+	
 }
 
-void test2() {
-	vector<int> nums({-2,-2,1,1,-3,1,-3,-3,-4,-2 });
-	
-	sort(nums.begin(), nums.end());
-	int i = 0, j = 1;
-	while (j < nums.size()) {
-		while (nums[i] == nums[j]) {
-			j++;
-		}
-		nums.erase(nums.begin() + i, nums.begin() + j);
-		i++;
+void test() {
+	/*迭代器失效*/
+	vector<int> v;
+	v.push_back(1);
+	v.push_back(2);
+	v.push_back(3);
+	v.push_back(4);
+	v.push_back(5);
+	vector<int>::iterator it = v.begin();
+	v.push_back(6); 
+	v.push_back(6); 
+	v.push_back(6); // 迭代器失效了   push_back  insert  resize  reserve 等接口都会导致迭代器的失效
+
+	while(it != v.end()) {
+		cout << *it << " ";
+		it++;
 	}
 }
+void testd1() {
+	string s1("+42");
+	string s2("42");
+	int i = s1 >= s2;
+	cout << i << endl;
+}
 int main() {
-	test2();
+	wh::testd();
+	
 }
